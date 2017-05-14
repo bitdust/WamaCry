@@ -16,4 +16,7 @@ a fake WannaCry
 ## Screeshot
 ![clipboard03](https://cloud.githubusercontent.com/assets/6072743/26030200/1ca3370a-387e-11e7-9c6d-8d1b029c90cc.png)
 
+
+## 许可证
+此软件基于本人原创~~抄袭~~的可乐协议发布>>[license](/LICENSE.txt)
 # >>>请谨慎使用！<<<
