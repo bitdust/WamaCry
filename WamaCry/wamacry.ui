@@ -39,12 +39,12 @@
     </property>
     <item>
      <property name="text">
-      <string>中文</string>
+      <string>english</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>english</string>
+      <string>中文</string>
      </property>
     </item>
    </widget>
@@ -192,20 +192,19 @@ color: rgb(0, 0, 0);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;我的电脑出了什么问题？&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;您的一些重要文件被我加密保存了&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;照片、图片、文档、压缩包、音频、视频文件、exe文件等，几乎所有类型的文件都被加密了，因此不能正常打开。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;这和一般文件损坏有本质上的区别，您大可在网上找找恢复文件的方法，我很保证，没有我们的解密服务，就算老天爷来了也不能恢复这些文档。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;有没有恢复这些文档的方法？&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;当然有可恢复的方法。只能通过我们的解密服务才能恢复。以人格担保，能够提供安全有效的恢复服务。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;但这是收费的，也不能无限的推迟。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;请点击&amp;lt;Decrypt&amp;gt;按钮，就有机会免费恢复一些文档。请您放心，我是绝不会骗你的。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;但想要恢复全部文档，需要付款点费用。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;是否随时都可以固定金额付款，就会恢复吗，当然不是，推迟付款时间越长对你越不利。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;最好当天马上付款费用，每过一天费用就会翻倍。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;还有，指定时间之内未付款，将会永远恢复不了。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;对了，忘了告诉你，对半年以上没钱付款的穷人，会有活动免费恢复，能否轮到您就看运气了。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:16pt; font-weight:600; color:#212121; background-color:#ffffff;&quot;&gt;What's wrong with my computer?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Some of your important files were saved by my encryption&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Photos, pictures, documents, compressed packages, audio, video files, exe files, etc., almost all types of files are encrypted, and therefore can not open normally.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;This is a fundamental difference between the general file damage, you can find a way to restore the file on the Internet, I guarantee that we do not have the decryption service, even if God can not restore these documents.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:16pt; font-weight:600; color:#212121; background-color:#ffffff;&quot;&gt;Is there a way to restore these documents?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Of course there are recoverable methods. Can only be restored through our decryption service. To provide a safe and effective recovery service.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;But this is a charge, and can not be infinitely delayed.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Please click the &amp;lt;Decrypt&amp;gt; button and have the opportunity to recover some documents for free. Please rest assured that I will never lie to you.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;But you want to restore all documents, you need to pay the cost.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Whether it can be fixed at any time the amount of payment, will be restored, of course not, the longer the delay in the payment of the more unfavorable to you.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;It is best to pay the day immediately, every day the cost will be doubled.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Also, within the specified time without payment, will never be restored.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Yes, forgot to tell you, for more than six months no money to pay the poor, there will be free to resume activities, can turn to see you luck.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">

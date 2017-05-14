@@ -5,6 +5,8 @@
 #include <QDateTime>
 #include <QDesktopServices>
 #include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
 
 WamaCry::WamaCry(QWidget *parent) :
     QMainWindow(parent),
@@ -84,4 +86,22 @@ void WamaCry::on_pushButton_3_clicked()
     QMessageBox msg;
     msg.setText("Service unavailable");
     msg.exec();
+}
+
+void WamaCry::on_comboBox_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        QFile file(":/english.html");
+        QTextStream in(&file);
+        file.open(QIODevice::ReadOnly | QIODevice::Text);
+        ui->textBrowser->setText(in.readAll());
+    }
+    else
+    {
+        QFile file(":/chinese.html");
+        QTextStream in(&file);
+        file.open(QIODevice::ReadOnly | QIODevice::Text);
+        ui->textBrowser->setText(in.readAll());
+    }
 }
