@@ -10,6 +10,9 @@
     <height>612</height>
    </rect>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
   <property name="windowTitle">
    <string>Wama Decrypt0r 3.0</string>
   </property>

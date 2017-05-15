@@ -14,7 +14,8 @@ WamaCry::WamaCry(QWidget *parent) :
     ui(new Ui::WamaCry)
 {
     ui->setupUi(this);
-
+    setWindowFlags(windowFlags()& ~Qt::WindowMaximizeButtonHint);
+    setFixedSize(this->width(), this->height());
     // read settings
     QSettings settings("./mod/config.ini", QSettings::IniFormat);
     settings.setIniCodec("UTF8");
