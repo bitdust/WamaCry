@@ -1,0 +1,21 @@
+[config]
+bgcolor=yellow
+txtcolor=black
+title=Doge Doge GO!
+titlecolor=black
+countdown1=Payment will be raised on:
+countdown2=Time Left:
+countdown3=Your files will be lost on:
+countdown4=Time Left:
+link1=About doge
+link2=How to doge?
+link3=Contact doge
+text=Send $300 worth of nyan to this address:
+address=DOGGGGGGGGGGGGGGGGGGGE
+button1=Copy
+button2=Check DOGE
+button3=DOGE
+picture1=./mod/doge.jpg
+picture2=./mod/picture2.png
+englishhtml=./mod/doge.html
+chinesehtml=./mod/chinese.html

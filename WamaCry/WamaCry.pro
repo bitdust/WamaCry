@@ -32,3 +32,4 @@ FORMS    += wamacry.ui
 
 RESOURCES += \
     wamacry.qrc
+RC_ICONS =ico.ico

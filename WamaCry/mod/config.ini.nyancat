@@ -1,0 +1,21 @@
+[config]
+bgcolor=black
+txtcolor=yellow
+title=Nyan~nyan~~nyan~~
+titlecolor=#FFFFFF
+countdown1=Payment will be raised on:
+countdown2=Time Left:
+countdown3=Your files will be lost on:
+countdown4=Time Left:
+link1=About nyancat
+link2=How to nyaaa?
+link3=Contact nyaa
+text=Send $300 worth of nyan to this address:
+address=NYAAAAAAAAAAAAAAAAAAAAAN
+button1=Copy
+button2=Check Nyan
+button3=Nyyyya
+picture1=./mod/nyancat1.png
+picture2=./mod/nyancat2.png
+englishhtml=./mod/nyancat.html
+chinesehtml=./mod/chinese.html

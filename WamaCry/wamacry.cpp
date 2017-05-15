@@ -7,18 +7,47 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include <QSettings>
 
 WamaCry::WamaCry(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::WamaCry)
 {
     ui->setupUi(this);
-    ui->label_3->setPixmap(QPixmap(":/gesloten-slot.png"));
-    ui->label_3->setScaledContents( true );
-    //ui->label_3->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
-    ui->label_4->setPixmap(QPixmap(":/Bitcoin_accepted_here_printable.png"));
-    ui->label_4->setScaledContents( true );
-    //ui->label_4->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+
+    // read settings
+    QSettings settings("./mod/config.ini", QSettings::IniFormat);
+    settings.setIniCodec("UTF8");
+    this->setStyleSheet(QString("background-color: ")+settings.value("config/bgcolor").toString());
+    ui->title->setText(settings.value("config/title").toString());
+    ui->title->setStyleSheet(QString("color: ")+settings.value("config/titlecolor").toString());
+    ui->countdown1->setText(settings.value("config/countdown1").toString());
+    ui->countdown2->setText(settings.value("config/countdown2").toString());
+    ui->countdown3->setText(settings.value("config/countdown3").toString());
+    ui->countdown4->setText(settings.value("config/countdown4").toString());
+    ui->text->setText(settings.value("config/text").toString());
+    ui->countdown1->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->countdown2->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->countdown3->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->countdown4->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->text->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->address->setText(settings.value("config/address").toString());
+    ui->button1->setText(settings.value("config/button1").toString());
+    ui->button2->setText(settings.value("config/button2").toString());
+    ui->button3->setText(settings.value("config/button3").toString());
+    ui->link1->setText(settings.value("config/link1").toString());
+    ui->link2->setText(settings.value("config/link2").toString());
+    ui->link3->setText(settings.value("config/link3").toString());
+    ui->picture1->setPixmap(QPixmap(settings.value("config/picture1").toString()));
+    ui->picture2->setPixmap(QPixmap(settings.value("config/picture2").toString()));
+
+    QFile file(settings.value("config/englishhtml").toString());
+    QTextStream in(&file);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    ui->textBrowser->setText(in.readAll());
+
+    ui->picture1->setScaledContents( true );
+    ui->picture2->setScaledContents( true );
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
@@ -52,36 +81,36 @@ void WamaCry::showTime()
     ui->lcdNumber_2->display(text2);
 }
 
-void WamaCry::on_pushButton_4_clicked()
+void WamaCry::on_link1_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://bitcoin.org/en/"));
 }
 
-void WamaCry::on_pushButton_5_clicked()
+void WamaCry::on_link2_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://bitcoin.org/en/exchanges"));
 }
 
-void WamaCry::on_pushButton_6_clicked()
+void WamaCry::on_link3_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://github.com/bitdust/WamaCry/issues/1"));
 }
 
-void WamaCry::on_pushButton_clicked()
+void WamaCry::on_button1_clicked()
 {
     QMessageBox msg;
     msg.setText("Error!");
     msg.exec();
 }
 
-void WamaCry::on_pushButton_2_clicked()
+void WamaCry::on_button2_clicked()
 {
     QMessageBox msg;
     msg.setText("Service unavailable");
     msg.exec();
 }
 
-void WamaCry::on_pushButton_3_clicked()
+void WamaCry::on_button3_clicked()
 {
     QMessageBox msg;
     msg.setText("Service unavailable");
@@ -92,14 +121,18 @@ void WamaCry::on_comboBox_currentIndexChanged(int index)
 {
     if(index == 0)
     {
-        QFile file(":/english.html");
+        QSettings settings("./mod/config.ini", QSettings::IniFormat);
+        settings.setIniCodec("UTF8");
+        QFile file(settings.value("config/englishhtml").toString());
         QTextStream in(&file);
         file.open(QIODevice::ReadOnly | QIODevice::Text);
         ui->textBrowser->setText(in.readAll());
     }
     else
     {
-        QFile file(":/chinese.html");
+        QSettings settings("./mod/config.ini", QSettings::IniFormat);
+        settings.setIniCodec("UTF8");
+        QFile file(settings.value("config/chinesehtml").toString());
         QTextStream in(&file);
         file.open(QIODevice::ReadOnly | QIODevice::Text);
         ui->textBrowser->setText(in.readAll());
