@@ -1,6 +1,24 @@
 # WamaCry
 a fake WannaCry  
-假装自己是个病毒  
+假装自己是个病毒
+**NEW：**增加自定义换皮肤功能！ 
+## 自定义皮肤
+
+1. 进入mod文件夹
+2. 丢进去你想用的图片
+3. 修改config.ini文件即可  
+
+**注意**
+config.ini文件格式中尽可能不要出现符号，比如逗号  
+图片尽可能事先裁好尺寸，不然会拉伸变形  
+mod文件夹内事先放置了几个参考的ini文件，包括：
+1. config.ini.orgin 原版  
+2. config.ini.nyancat 彩虹猫
+3. config.ini.doge doge狗  
+
+删掉后缀并替换config.ini文件即可生效
+你也可以参考上面几个发挥你的想象力吧！
+
 ## 用途
 1. 明天就是deadline了可是论文还没写完怎么办
 2. 这稿子还想再拖一周可是借口都用完了怎么办
@@ -15,7 +33,7 @@ a fake WannaCry
 4. 一脸真诚的去向老板报告情况
 ## Screeshot
 ![clipboard03](https://cloud.githubusercontent.com/assets/6072743/26030200/1ca3370a-387e-11e7-9c6d-8d1b029c90cc.png)
-
+![clipboard01](https://cloud.githubusercontent.com/assets/6072743/26055562/06d88bf6-39a4-11e7-9bf5-807d89c0b39d.png)
 
 ## 许可证
 此软件基于本人原创~~抄袭~~的可乐协议发布>>[license](/LICENSE.txt)
