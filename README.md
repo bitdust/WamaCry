@@ -1,23 +1,6 @@
 # WamaCry
 a fake WannaCry  
-假装自己是个病毒
-**NEW：**增加自定义换皮肤功能！ 
-## 自定义皮肤
-
-1. 进入mod文件夹
-2. 丢进去你想用的图片
-3. 修改config.ini文件即可  
-
-**注意**
-config.ini文件格式中尽可能不要出现符号，比如逗号  
-图片尽可能事先裁好尺寸，不然会拉伸变形  
-mod文件夹内事先放置了几个参考的ini文件，包括：
-1. config.ini.orgin 原版  
-2. config.ini.nyancat 彩虹猫
-3. config.ini.doge doge狗  
-
-删掉后缀并替换config.ini文件即可生效
-你也可以参考上面几个发挥你的想象力吧！
+假装自己是个病毒  
 
 ## 用途
 1. 明天就是deadline了可是论文还没写完怎么办
@@ -31,6 +14,24 @@ mod文件夹内事先放置了几个参考的ini文件，包括：
 2. 在你想破坏的文件上右键->打开方式->选择默认程序
 3. 浏览到程序文件夹并设置 WamaCry.exe 为这个文件类型的默认打开程序
 4. 一脸真诚的去向老板报告情况
+
+## 自定义皮肤
+
+1. 进入mod文件夹
+2. 丢进去你想用的图片
+3. 修改config.ini文件即可  
+
+**注意**  
+config.ini文件格式中尽可能不要出现符号，比如逗号  
+图片尽可能事先裁好尺寸，不然会拉伸变形  
+mod文件夹内事先放置了几个参考的ini文件，包括：
+1. config.ini.orgin 原版  
+2. config.ini.nyancat 彩虹猫
+3. config.ini.doge doge狗  
+
+删掉后缀并替换config.ini文件即可生效  
+你也可以参考上面几个发挥你的想象力吧！
+
 ## Screeshot
 ![clipboard03](https://cloud.githubusercontent.com/assets/6072743/26030200/1ca3370a-387e-11e7-9c6d-8d1b029c90cc.png)
 ![clipboard01](https://cloud.githubusercontent.com/assets/6072743/26055562/06d88bf6-39a4-11e7-9bf5-807d89c0b39d.png)
