@@ -1,4 +1,8 @@
 # WamaCry
+[![GitHub stars](https://img.shields.io/github/stars/bitdust/WamaCry.svg)](https://github.com/bitdust/WamaCry/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/bitdust/WamaCry.svg)](https://github.com/bitdust/WamaCry/issues)
+[![GitHub forks](https://img.shields.io/github/forks/bitdust/WamaCry.svg)](https://github.com/bitdust/WamaCry/network)
+
 a fake WannaCry  
 假装自己是个病毒  
 
