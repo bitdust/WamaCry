@@ -4,6 +4,15 @@
 #include <QMainWindow>
 #include <QTime>
 #include <QDateTime>
+#include <qtimer.h>
+#include <QDesktopServices>
+#include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
+#include <QSettings>
+#include <QMovie>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
 
 namespace Ui {
 class WamaCry;
@@ -25,6 +34,7 @@ private:
     QDateTime date_end;
     QString picture1path;
     QString picture2path;
+    QString musicpath;
 
 private slots:
     void showTime();

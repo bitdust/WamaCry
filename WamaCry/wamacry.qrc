@@ -1,8 +1,1 @@
-<RCC>
-    <qresource prefix="/">
-        <file>gesloten-slot.png</file>
-        <file>Bitcoin_accepted_here_printable.png</file>
-        <file>chinese.html</file>
-        <file>english.html</file>
-    </qresource>
-</RCC>
+<RCC/>

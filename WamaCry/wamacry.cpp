@@ -1,12 +1,5 @@
 #include "wamacry.h"
 #include "ui_wamacry.h"
-#include <qtimer.h>
-#include <QDesktopServices>
-#include <QMessageBox>
-#include <QFile>
-#include <QTextStream>
-#include <QSettings>
-#include <QMovie>
 
 WamaCry::WamaCry(QWidget *parent) :
     QMainWindow(parent),
@@ -17,6 +10,15 @@ WamaCry::WamaCry(QWidget *parent) :
     setFixedSize(this->width(), this->height());
 
     load_config();
+    ui->textBrowser->setText(englishdoc);
+
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + musicpath));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    QMediaPlayer *music = new QMediaPlayer();
+    music->setPlaylist(playlist);
+    music->play();
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
@@ -45,7 +47,6 @@ void WamaCry::showTime()
     int days_left = datenow.secsTo(date_end)/3600/24;
     int hours_left = (datenow.secsTo(date_end)-days_left*24*3600)/3600;
     int mins_left = (datenow.secsTo(date_end)-days_left*24*3600-hours_left*3600)/60;
-    // int secs_left = datenow.secsTo(date_end)%60;
     QString text2;
     text2 = QString::number(days_left) + "d:" + QString::number(hours_left) + ":" + QString::number(mins_left);
     ui->lcdNumber_2->display(text2);
@@ -124,6 +125,7 @@ void WamaCry::load_config()
     ui->link1->setText(settings.value("config/link1").toString());
     ui->link2->setText(settings.value("config/link2").toString());
     ui->link3->setText(settings.value("config/link3").toString());
+    musicpath = settings.value("config/music").toString();
 
     if (settings.value("config/picture1").toString() != picture1path)
     {
@@ -172,5 +174,12 @@ void WamaCry::load_config()
     ui->picture1->setScaledContents( true );
     ui->picture2->setScaledContents( true );
 
-    date_end = QDateTime::fromString(QString(settings.value("config/enddate").toString()), "yyyy:M:d");
+    if(QString(settings.value("config/enddate").toString()).length() > 0)
+    {
+        date_end = QDateTime::fromString(QString(settings.value("config/enddate").toString()), "yyyy:M:d");
+    }
+    else
+    {
+        date_end = QDateTime::fromString(QString("2017:6:1"), "yyyy:M:d");
+    }
 }

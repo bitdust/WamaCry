@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,8 +30,5 @@ SOURCES += main.cpp\
 HEADERS  += wamacry.h
 
 FORMS    += wamacry.ui
-
-RESOURCES += \
-    wamacry.qrc
 
 RC_ICONS =ico.ico
