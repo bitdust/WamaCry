@@ -129,12 +129,14 @@ void WamaCry::load_config()
 
     QFile file1(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
     QTextStream in1(&file1);
+    in1.setCodec("UTF-8");
     file1.open(QIODevice::ReadOnly | QIODevice::Text);
     englishdoc = in1.readAll();
     file1.close();
 
     QFile file2(QCoreApplication::applicationDirPath() + settings.value("config/chinesehtml").toString());
     QTextStream in2(&file2);
+    in2.setCodec("UTF-8");
     file2.open(QIODevice::ReadOnly | QIODevice::Text);
     chinesedoc = in2.readAll();
     file2.close();
