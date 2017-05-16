@@ -36,6 +36,9 @@ mod文件夹内事先放置了几个参考的ini文件，包括：
 删掉后缀并替换config.ini文件即可生效  
 你也可以参考上面几个发挥你的想象力吧！
 
+## Build
+作为Qt新手，我并没有跨平台开发的经验，虽然有人确实试过可以在Mac下编译通过。  
+不过需要提醒一句，用Qt生成完成之后，需要将mod文件夹手动拷贝至生成目录后，才能正常运行。
 ## Screenshot
 ![clipboard03](https://cloud.githubusercontent.com/assets/6072743/26030200/1ca3370a-387e-11e7-9c6d-8d1b029c90cc.png)
 ![clipboard01](https://cloud.githubusercontent.com/assets/6072743/26055562/06d88bf6-39a4-11e7-9bf5-807d89c0b39d.png)
