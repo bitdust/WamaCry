@@ -23,6 +23,8 @@ private:
     QString englishdoc;
     QString chinesedoc;
     QDateTime date_end;
+    QString picture1path;
+    QString picture2path;
 
 private slots:
     void showTime();

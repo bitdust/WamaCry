@@ -6,6 +6,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QSettings>
+#include <QMovie>
 
 WamaCry::WamaCry(QWidget *parent) :
     QMainWindow(parent),
@@ -16,7 +17,6 @@ WamaCry::WamaCry(QWidget *parent) :
     setFixedSize(this->width(), this->height());
 
     load_config();
-    ui->textBrowser->setText(englishdoc);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
@@ -124,8 +124,36 @@ void WamaCry::load_config()
     ui->link1->setText(settings.value("config/link1").toString());
     ui->link2->setText(settings.value("config/link2").toString());
     ui->link3->setText(settings.value("config/link3").toString());
-    ui->picture1->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture1").toString()));
-    ui->picture2->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture2").toString()));
+
+    if (settings.value("config/picture1").toString() != picture1path)
+    {
+        picture1path = settings.value("config/picture1").toString();
+        if (settings.value("config/picture1").toString().contains(QString(".gif")))
+        {
+            QMovie *movie1 = new QMovie(QCoreApplication::applicationDirPath() + picture1path);
+            ui->picture1->setMovie(movie1);
+            movie1->start();
+        }
+        else
+        {
+            ui->picture1->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + picture1path));
+        }
+    }
+
+    if (settings.value("config/picture2").toString() != picture2path)
+    {
+        picture2path = settings.value("config/picture2").toString();
+        if (settings.value("config/picture2").toString().contains(QString(".gif")))
+        {
+            QMovie *movie2 = new QMovie(QCoreApplication::applicationDirPath() + picture1path);
+            ui->picture2->setMovie(movie2);
+            movie2->start();
+        }
+        else
+        {
+            ui->picture2->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + picture2path));
+        }
+    }
 
     QFile file1(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
     QTextStream in1(&file1);
