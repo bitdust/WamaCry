@@ -41,7 +41,7 @@ mod文件夹内事先放置了几个参考的ini文件，包括：
 不过需要提醒一句，用Qt生成完成之后，需要将mod文件夹手动拷贝至生成目录后，才能正常运行。
 ## Screenshot
 ![clipboard03](https://cloud.githubusercontent.com/assets/6072743/26030200/1ca3370a-387e-11e7-9c6d-8d1b029c90cc.png)
-![clipboard01](https://cloud.githubusercontent.com/assets/6072743/26055562/06d88bf6-39a4-11e7-9bf5-807d89c0b39d.png)
+![3](https://cloud.githubusercontent.com/assets/6072743/26116817/0b16075e-3a97-11e7-8819-2d4e475f4627.gif)
 
 ## 许可证
 此软件基于本人原创~~抄袭~~的可乐协议发布>>[license](/LICENSE.txt)
