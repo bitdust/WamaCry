@@ -1,8 +1,6 @@
 #include "wamacry.h"
 #include "ui_wamacry.h"
 #include <qtimer.h>
-#include <QTime>
-#include <QDateTime>
 #include <QDesktopServices>
 #include <QMessageBox>
 #include <QFile>
@@ -16,39 +14,9 @@ WamaCry::WamaCry(QWidget *parent) :
     ui->setupUi(this);
     setWindowFlags(windowFlags()& ~Qt::WindowMaximizeButtonHint);
     setFixedSize(this->width(), this->height());
-    // read settings
-    QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
-    settings.setIniCodec("UTF8");
-    this->setStyleSheet(QString("background-color: ")+settings.value("config/bgcolor").toString());
-    ui->title->setText(settings.value("config/title").toString());
-    ui->title->setStyleSheet(QString("color: ")+settings.value("config/titlecolor").toString());
-    ui->countdown1->setText(settings.value("config/countdown1").toString());
-    ui->countdown2->setText(settings.value("config/countdown2").toString());
-    ui->countdown3->setText(settings.value("config/countdown3").toString());
-    ui->countdown4->setText(settings.value("config/countdown4").toString());
-    ui->text->setText(settings.value("config/text").toString());
-    ui->countdown1->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
-    ui->countdown2->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
-    ui->countdown3->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
-    ui->countdown4->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
-    ui->text->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
-    ui->address->setText(settings.value("config/address").toString());
-    ui->button1->setText(settings.value("config/button1").toString());
-    ui->button2->setText(settings.value("config/button2").toString());
-    ui->button3->setText(settings.value("config/button3").toString());
-    ui->link1->setText(settings.value("config/link1").toString());
-    ui->link2->setText(settings.value("config/link2").toString());
-    ui->link3->setText(settings.value("config/link3").toString());
-    ui->picture1->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture1").toString()));
-    ui->picture2->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture2").toString()));
 
-    QFile file(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
-    QTextStream in(&file);
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    ui->textBrowser->setText(in.readAll());
-
-    ui->picture1->setScaledContents( true );
-    ui->picture2->setScaledContents( true );
+    load_config();
+    ui->textBrowser->setText(englishdoc);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
@@ -64,6 +32,8 @@ WamaCry::~WamaCry()
 
 void WamaCry::showTime()
 {
+    load_config();
+
     QTime timenow = QTime::currentTime();
     QTime time_end = QTime::fromString(QString("23:59"),"hh:mm");
     QTime time_left = QTime::fromMSecsSinceStartOfDay(timenow.msecsTo(time_end));
@@ -71,7 +41,6 @@ void WamaCry::showTime()
     ui->lcdNumber->display(text);
 
     QDateTime datenow = QDateTime::currentDateTime();
-    QDateTime date_end = QDateTime::fromString(QString("2017:6:3"), "yyyy:M:d");
     ui->end_of_world->setText(date_end.toString("yyyy-M-d:hh:mm"));
     int days_left = datenow.secsTo(date_end)/3600/24;
     int hours_left = (datenow.secsTo(date_end)-days_left*24*3600)/3600;
@@ -122,20 +91,56 @@ void WamaCry::on_comboBox_currentIndexChanged(int index)
 {
     if(index == 0)
     {
-        QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
-        settings.setIniCodec("UTF8");
-        QFile file(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
-        QTextStream in(&file);
-        file.open(QIODevice::ReadOnly | QIODevice::Text);
-        ui->textBrowser->setText(in.readAll());
+        ui->textBrowser->setText(englishdoc);
     }
     else
     {
-        QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
-        settings.setIniCodec("UTF8");
-        QFile file(QCoreApplication::applicationDirPath() + settings.value("config/chinesehtml").toString());
-        QTextStream in(&file);
-        file.open(QIODevice::ReadOnly | QIODevice::Text);
-        ui->textBrowser->setText(in.readAll());
+        ui->textBrowser->setText(chinesedoc);
     }
+}
+
+void WamaCry::load_config()
+{
+    // read settings
+    QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
+    settings.setIniCodec("UTF8");
+    this->setStyleSheet(QString("background-color: ")+settings.value("config/bgcolor").toString());
+    ui->title->setText(settings.value("config/title").toString());
+    ui->title->setStyleSheet(QString("color: ")+settings.value("config/titlecolor").toString());
+    ui->countdown1->setText(settings.value("config/countdown1").toString());
+    ui->countdown2->setText(settings.value("config/countdown2").toString());
+    ui->countdown3->setText(settings.value("config/countdown3").toString());
+    ui->countdown4->setText(settings.value("config/countdown4").toString());
+    ui->text->setText(settings.value("config/text").toString());
+    ui->countdown1->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->countdown2->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->countdown3->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->countdown4->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->text->setStyleSheet(QString("color: ")+settings.value("config/txtcolor").toString());
+    ui->address->setText(settings.value("config/address").toString());
+    ui->button1->setText(settings.value("config/button1").toString());
+    ui->button2->setText(settings.value("config/button2").toString());
+    ui->button3->setText(settings.value("config/button3").toString());
+    ui->link1->setText(settings.value("config/link1").toString());
+    ui->link2->setText(settings.value("config/link2").toString());
+    ui->link3->setText(settings.value("config/link3").toString());
+    ui->picture1->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture1").toString()));
+    ui->picture2->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture2").toString()));
+
+    QFile file1(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
+    QTextStream in1(&file1);
+    file1.open(QIODevice::ReadOnly | QIODevice::Text);
+    englishdoc = in1.readAll();
+    file1.close();
+
+    QFile file2(QCoreApplication::applicationDirPath() + settings.value("config/chinesehtml").toString());
+    QTextStream in2(&file2);
+    file2.open(QIODevice::ReadOnly | QIODevice::Text);
+    chinesedoc = in2.readAll();
+    file2.close();
+
+    ui->picture1->setScaledContents( true );
+    ui->picture2->setScaledContents( true );
+
+    date_end = QDateTime::fromString(QString(settings.value("config/enddate").toString()), "yyyy:M:d");
 }

@@ -46,16 +46,16 @@
     </item>
     <item>
      <property name="text">
-      <string>中文</string>
+      <string>chinese</string>
      </property>
     </item>
    </widget>
    <widget class="QLabel" name="title">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>310</x>
       <y>0</y>
-      <width>431</width>
+      <width>531</width>
       <height>41</height>
      </rect>
     </property>
@@ -99,7 +99,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>170</x>
        <y>20</y>
-       <width>351</width>
+       <width>411</width>
        <height>16</height>
       </rect>
      </property>
@@ -429,10 +429,10 @@ color: rgb(0, 0, 0);</string>
     <widget class="QLabel" name="countdown3">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>10</y>
-       <width>181</width>
-       <height>16</height>
+       <width>211</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="font">
@@ -512,7 +512,7 @@ color: rgb(0, 0, 0);</string>
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -542,7 +542,7 @@ color: rgb(0, 0, 0);</string>
        </property>
       </widget>
      </item>
-     <item alignment="Qt::AlignLeft">
+     <item>
       <widget class="QPushButton" name="link2">
        <property name="font">
         <font>

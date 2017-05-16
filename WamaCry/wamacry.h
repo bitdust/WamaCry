@@ -2,6 +2,8 @@
 #define WAMACRY_H
 
 #include <QMainWindow>
+#include <QTime>
+#include <QDateTime>
 
 namespace Ui {
 class WamaCry;
@@ -17,6 +19,10 @@ public:
 
 private:
     Ui::WamaCry *ui;
+    void load_config();
+    QString englishdoc;
+    QString chinesedoc;
+    QDateTime date_end;
 
 private slots:
     void showTime();
@@ -27,6 +33,7 @@ private slots:
     void on_button2_clicked();
     void on_button3_clicked();
     void on_comboBox_currentIndexChanged(int index);
+
 
 };
 
