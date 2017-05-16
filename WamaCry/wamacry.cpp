@@ -17,7 +17,7 @@ WamaCry::WamaCry(QWidget *parent) :
     setWindowFlags(windowFlags()& ~Qt::WindowMaximizeButtonHint);
     setFixedSize(this->width(), this->height());
     // read settings
-    QSettings settings("./mod/config.ini", QSettings::IniFormat);
+    QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
     settings.setIniCodec("UTF8");
     this->setStyleSheet(QString("background-color: ")+settings.value("config/bgcolor").toString());
     ui->title->setText(settings.value("config/title").toString());
@@ -39,10 +39,10 @@ WamaCry::WamaCry(QWidget *parent) :
     ui->link1->setText(settings.value("config/link1").toString());
     ui->link2->setText(settings.value("config/link2").toString());
     ui->link3->setText(settings.value("config/link3").toString());
-    ui->picture1->setPixmap(QPixmap(settings.value("config/picture1").toString()));
-    ui->picture2->setPixmap(QPixmap(settings.value("config/picture2").toString()));
+    ui->picture1->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture1").toString()));
+    ui->picture2->setPixmap(QPixmap(QCoreApplication::applicationDirPath() + settings.value("config/picture2").toString()));
 
-    QFile file(settings.value("config/englishhtml").toString());
+    QFile file(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
     QTextStream in(&file);
     file.open(QIODevice::ReadOnly | QIODevice::Text);
     ui->textBrowser->setText(in.readAll());
@@ -122,18 +122,18 @@ void WamaCry::on_comboBox_currentIndexChanged(int index)
 {
     if(index == 0)
     {
-        QSettings settings("./mod/config.ini", QSettings::IniFormat);
+        QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
         settings.setIniCodec("UTF8");
-        QFile file(settings.value("config/englishhtml").toString());
+        QFile file(QCoreApplication::applicationDirPath() + settings.value("config/englishhtml").toString());
         QTextStream in(&file);
         file.open(QIODevice::ReadOnly | QIODevice::Text);
         ui->textBrowser->setText(in.readAll());
     }
     else
     {
-        QSettings settings("./mod/config.ini", QSettings::IniFormat);
+        QSettings settings(QCoreApplication::applicationDirPath() + "/mod/config.ini", QSettings::IniFormat);
         settings.setIniCodec("UTF8");
-        QFile file(settings.value("config/chinesehtml").toString());
+        QFile file(QCoreApplication::applicationDirPath() + settings.value("config/chinesehtml").toString());
         QTextStream in(&file);
         file.open(QIODevice::ReadOnly | QIODevice::Text);
         ui->textBrowser->setText(in.readAll());
