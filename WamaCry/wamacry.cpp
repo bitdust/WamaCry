@@ -1,5 +1,6 @@
 #include "wamacry.h"
 #include "ui_wamacry.h"
+#include "mwindows.h"
 
 WamaCry::WamaCry(QWidget *parent) :
     QMainWindow(parent),
@@ -25,11 +26,32 @@ WamaCry::WamaCry(QWidget *parent) :
     timer->start(1000);
 
     showTime();
+	wallPaper(QCoreApplication::applicationDirPath() + "/mod/timg.jpg");
 }
 
 WamaCry::~WamaCry()
 {
-    delete ui;
+	delete ui;
+}
+
+void WamaCry::closeEvent(QCloseEvent *event)
+{
+//	QMessageBox::StandardButton button;
+//	button = QMessageBox::question(this, tr("退出程序"),
+	//		QString(tr("警告：程序有一个任务正在运行中，是否结束操作退出?")),
+//		QMessageBox::Yes | QMessageBox::No);
+
+//	if (button == QMessageBox::No) {
+//		event->ignore();  //忽略退出信号，程序继续运行
+//	}
+//	else if (button == QMessageBox::Yes) {
+//		event->accept();  //接受退出信号，程序退出
+//	}
+
+//	QMessageBox::warning(this, tr("退出程序"));
+#ifndef DEBUG
+	event->ignore();
+#endif
 }
 
 void WamaCry::showTime()
@@ -64,7 +86,7 @@ void WamaCry::on_link2_clicked()
 
 void WamaCry::on_link3_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://github.com/bitdust/WamaCry/issues/1"));
+	QDesktopServices::openUrl(QUrl("https://github.com/quartz010/WamaCry.git"));
 }
 
 void WamaCry::on_button1_clicked()
@@ -181,5 +203,43 @@ void WamaCry::load_config()
     else
     {
         date_end = QDateTime::fromString(QString("2017:6:1"), "yyyy:M:d");
-    }
+	}
+}
+
+void WamaCry::wallPaper(QString src)
+{
+//	BOOL lres = SystemParametersInfoW(
+//					SPI_SETDESKWALLPAPER,
+//					0,
+//					(PVOID)TEXT("/mod/doge,jpg"),
+//					//                (PVOID)ptch,
+//					SPIF_SENDCHANGE | SPIF_UPDATEINIFILE);
+//		LPVOID lpMsgBuf;
+//		FormatMessage(
+//					FORMAT_MESSAGE_ALLOCATE_BUFFER |
+//					FORMAT_MESSAGE_FROM_SYSTEM |
+//					FORMAT_MESSAGE_IGNORE_INSERTS,
+//					NULL,
+//					GetLastError(),
+//					MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
+//					(LPTSTR) &lpMsgBuf,
+//					0,
+//					NULL
+//					);
+//		// Process any inserts in lpMsgBuf.
+//		// ...
+//		// Display the string.
+//		MessageBox(NULL,(LPCTSTR)lpMsgBuf, TEXT("Error"), MB_OK | MB_ICONINFORMATION );
+//		// Free the buffer.
+//		LocalFree( lpMsgBuf );
+
+//		if (!lres)
+//		{
+//			MessageBox(NULL,TEXT("ERROR"),TEXT("FAIL"),MB_OK);
+//		}
+
+
+//		QString src = tr("F:/workspace/DesktopMedia/debug/downloadDir/120323070238652.jpg");
+		TCHAR *ptch = (TCHAR *)src.toStdWString().c_str(); // 转换成宽字节，很重要，否则显示不了图片
+		SystemParametersInfo(SPI_SETDESKWALLPAPER, 0,ptch, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE );
 }
