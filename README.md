@@ -5,6 +5,7 @@
 
 a fake WannaCry  
 假装自己是个病毒  
+
 兼容：win7/win8.1/win10  
 Mac版请自行编译，或使用：[FakeWannaCry](https://github.com/iVanilla/FakeWannaCry)
 
