@@ -40,7 +40,7 @@ mod文件夹内事先放置了几个参考的ini文件，包括：
 作为Qt新手，我并没有跨平台开发的经验，虽然有人确实试过可以在Mac下编译通过。  
 不过需要提醒一句，用Qt生成完成之后，需要将mod文件夹手动拷贝至生成目录后，才能正常运行。
 ## Screenshot
-![clipboard03](https://cloud.githubusercontent.com/assets/6072743/26030200/1ca3370a-387e-11e7-9c6d-8d1b029c90cc.png)
+![clipboard01](https://cloud.githubusercontent.com/assets/6072743/26133554/88b1e0c8-3ada-11e7-9796-1059ea8b93dc.png)
 ![3](https://cloud.githubusercontent.com/assets/6072743/26133474/e2aee0ea-3ad9-11e7-8aeb-b434e277491a.gif)
 
 ## 许可证
