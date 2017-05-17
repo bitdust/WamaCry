@@ -4,7 +4,9 @@
 [![GitHub forks](https://img.shields.io/github/forks/bitdust/WamaCry.svg)](https://github.com/bitdust/WamaCry/network)
 
 a fake WannaCry  
-假装自己是个病毒  
+假装自己是个病毒  
+兼容：win7/win8.1/win10  
+Mac版请自行编译，或使用：[FakeWannaCry](https://github.com/iVanilla/FakeWannaCry)
 
 ## 用途
 1. 明天就是deadline了可是论文还没写完怎么办
