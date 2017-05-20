@@ -27,7 +27,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
         wamacry.cpp
 
-HEADERS  += wamacry.h
+HEADERS  += wamacry.h \
+    mwindows.h
 
 FORMS    += wamacry.ui
 

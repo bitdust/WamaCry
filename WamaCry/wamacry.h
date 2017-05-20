@@ -13,6 +13,10 @@
 #include <QMovie>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
+#include <QCloseEvent>
+#include <QSplashScreen>
+#include <QPixmap>
+//#define DEBUG
 
 namespace Ui {
 class WamaCry;
@@ -25,6 +29,7 @@ class WamaCry : public QMainWindow
 public:
     explicit WamaCry(QWidget *parent = 0);
     ~WamaCry();
+	void closeEvent(QCloseEvent *event);
 
 private:
     Ui::WamaCry *ui;
@@ -35,6 +40,7 @@ private:
     QString picture1path;
     QString picture2path;
     QString musicpath;
+	void wallPaper(QString src);
 
 private slots:
     void showTime();
