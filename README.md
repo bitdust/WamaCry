@@ -8,7 +8,7 @@ a fake WannaCry
 
 兼容：win7/win8.1/win10  
 Mac版请自行编译，或使用：[FakeWannaCry](https://github.com/iVanilla/FakeWannaCry)
-
+另一Mac版本：[WannaCry](https://github.com/hufan-Akari/WannaCry)
 ## 用途
 1. 明天就是deadline了可是论文还没写完怎么办
 2. 这稿子还想再拖一周可是借口都用完了怎么办
